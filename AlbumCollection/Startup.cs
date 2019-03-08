@@ -19,7 +19,7 @@ namespace AlbumCollection
             services.AddMvc();
             services.AddDbContext<AlbumContext>();
             services.AddScoped<AlbumRepository, AlbumRepository>();
-            services.AddScoped<SongRepository, SongRepository>();
+            services.AddScoped<ISongRepository, SongRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

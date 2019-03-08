@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AlbumCollection.Repositories
 {
-    public class AlbumRepository
+    public class AlbumRepository : IAlbumRepository
     {
     }
 }
