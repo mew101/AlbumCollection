@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<AlbumCollection.Models.Album>
 @{
     ViewData["Title"] = "Index";
 }
@@ -16,9 +16,9 @@
         <ul>
             @foreach (var Album in Model)
             {
-              
+                <li><a href="/Album/Details/@Album.AlbumId">@Album.Name>@Album.Artist></a><br /><img src="@Album.ImgPath" /></li>
             }
         </ul>
-        </div>
+    </div>
 </body>
 </html>

@@ -45,7 +45,66 @@ namespace AlbumCollection
                     Artist = "Parkers Friends",
                     ImgPath = "/Images/CabbagePatch.png",
                 });
-                }
+
+            modelBuilder.Entity<Song>().HasData(
+                new Song()
+                {
+                    SongId = 1,
+                    Title = " Twinkle Twinkle Little Star",
+                    AlbumId = 1
+                },
+                new Song()
+                {
+                    SongId = 2,
+                    Title = "Baby Mine",
+                    AlbumId = 1
+                },
+                new Song()
+                {
+                    SongId = 3,
+                    Title = "House at Pooh Corner",
+                    AlbumId = 1
+                },
+
+                new Song()
+                {
+                    SongId = 4,
+                    Title = "Upside Down",
+                    AlbumId = 2
+                },
+                new Song()
+                {
+                    SongId = 5,
+                    Title = "People Watching",
+                    AlbumId = 2
+                },
+                new Song()
+                {
+                    SongId = 6,
+                    Title = "Wrong Turn",
+                    AlbumId = 2
+                },
+
+                new Song()
+                {
+                    SongId = 7,
+                    Title = "Cabbage Patch Theme",
+                    AlbumId = 3
+                },
+                new Song()
+                {
+                    SongId = 8,
+                    Title = "Babyland",
+                    AlbumId = 3
+                },
+                new Song()
+                {
+                    SongId = 9,
+                    Title = "Villains Three",
+                    AlbumId = 3
+                });
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
 }
