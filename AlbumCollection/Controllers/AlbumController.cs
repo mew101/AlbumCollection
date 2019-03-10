@@ -18,9 +18,16 @@ namespace AlbumCollection.Controllers
 
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            var model = albumRepo.GetAll();
+            return View(model);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = albumRepo.GetById(id);
+            return View(model);
         }
     }
 }
