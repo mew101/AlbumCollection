@@ -18,7 +18,7 @@ namespace AlbumCollection
         {
             services.AddMvc();
             services.AddDbContext<AlbumContext>();
-            services.AddScoped<AlbumRepository, AlbumRepository>();
+            services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<ISongRepository, SongRepository>();
         }
 
