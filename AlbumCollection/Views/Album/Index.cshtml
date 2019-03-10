@@ -1,12 +1,16 @@
 ﻿@model IEnumerable<AlbumCollection.Models.Album>
-@{
-    ViewData["Title"] = "Index";
-}
 
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html>
 <head>
+    <link href="~/AlbumIndex.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Norican|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width" initial-scale=1.0 />
-    <title>Welcome to Beerds, a Unique Beer Review Site</title>
+    <title>Welcome to Song Collection</title>
 </head>
 <body>
     <h2>Index</h2>
@@ -14,9 +18,12 @@
     <div class="MainPageText">Which Style Do You Consume?</div>
     <div id="mainList">
         <ul>
-            @foreach (var Album in Model)
+            @foreach (var album in Model)
             {
-                <li><a href="/Album/Details/@Album.AlbumId">@Album.Name>@Album.Artist></a><br /><img src="@Album.ImgPath" /></li>
+                <li>
+                <a href="/Album/Index/@album.AlbumId"><h4>@album.Name</h4><h4>@album.Artist</h4></a>
+                <img src="@album.ImgPath" />
+                </li>
             }
         </ul>
     </div>
