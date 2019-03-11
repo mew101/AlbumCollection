@@ -1,23 +1,19 @@
-﻿
+﻿@model AlbumCollection.Models.Album
 @{
     ViewData["Title"] = "Details";
 }
 <html>
 <body>
-    <h2>Details</h2>
-    <div class="ReviewBox">
-        <div class="beerDetails">
-            <div class="beerDescription">
-                <h1>@Model.Name</h1>
-                
-            
-
-                <p class="descriptionTxt">@Model.Artist</p>
-            </div>
-            <div class="beerPicture">
-                <img src="@Model.ImgPath" />
-            </div>
-        </div>
-    </div>
+    <h1>@Model.Name</h1>
+    <h2>By: @Model.Artist</h2>
+    <ul>
+        @foreach (var song in Model.Songs)
+        {
+            <li>
+                <h3>@song.Title</h3>
+            </li>
+        }
+    </ul>
+    @*<a href="/Song/Create/@Model.AlbumId">Add Song</a>*@
 </body>
 </html>
