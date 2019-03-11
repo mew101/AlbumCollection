@@ -27,10 +27,10 @@ namespace AlbumCollection.Tests
         {
             var expectedModel = new List<Album>();
             repo.GetAll().Returns(expectedModel);
-            var actualModel = underTest.Index();
+            var actualModel = underTest.Index().Model;
 
 
-           // Assert.Equal(expectedModel, actualModel);
+            Assert.Equal(expectedModel, actualModel);
 
         }
     }
