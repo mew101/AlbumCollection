@@ -17,11 +17,13 @@
             <p id="header">Welcome To Album Collection</p>
         </header>
         <div>
+            <p id="header2">The simple way to organize your records!</p>
             <ul>
                 @foreach (var album in Model)
                 {
-                    <li><a href="/Album/Details/@album.AlbumId"><span class="album-name">@album.Name</span><br />
-                        <span class="album-artist">@album.Artist</span>
+                    <li><a href="/Album/Details/@album.AlbumId">
+                        <span class="album-name">@album.Name</span><br/>
+                        <span class="album-artist">By: @album.Artist</span><br />
                         <img src="@album.ImgPath" style="height: 25vh; width: auto; padding: 20px" /></a></li>
                 }
             </ul>
