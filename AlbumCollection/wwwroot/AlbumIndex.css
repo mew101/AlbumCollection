@@ -2,25 +2,26 @@
     margin: 0;
     padding: 0;
     background-color: lightgray;
-    
+   
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    font-family: 'Baloo Chettan', cursive;
 }
-.container a{
-    text-decoration: none;
-}
-#header{
-    display:flex;
+    .container a {
+        text-decoration: none;
+    }
+#header {
+    display: flex;
     justify-content: center;
     font-size: 30px;
     color: black;
     margin-top: 2em;
     margin-bottom: 2em;
-    
+   
 }
 #header2 {
     display: flex;
