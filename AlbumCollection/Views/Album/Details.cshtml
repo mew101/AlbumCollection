@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/AlbumDetails.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -16,15 +18,16 @@
         <h2>By: @Model.Artist</h2>
 
         <img src="@Model.ImgPath" style="height: 25vh; width: auto; padding: 20px" />
-
-        <ul>
-            @foreach (var song in Model.Songs)
-            {
-                <li>
-                    <h3>@song.Title</h3>
-                </li>
-            }
-        </ul>
+        <div id="songs">
+            <ul>
+                @foreach (var song in Model.Songs)
+                {
+                    <li>
+                        <h3>@song.Title</h3>
+                    </li>
+                }
+            </ul>
+        </div>
         <a href="/Song/Create/@Model.AlbumId">Add Song</a>
         <a href="/Album/Index">Back to List</a>
     </div>
