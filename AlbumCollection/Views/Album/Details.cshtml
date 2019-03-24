@@ -2,19 +2,31 @@
 @{
     ViewData["Title"] = "Details";
 }
+<!DOCTYPE html>
 <html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/AlbumDetails.css" rel="stylesheet" />
+</head>
 <body>
-    <h1>@Model.Name</h1>
-    <h2>By: @Model.Artist</h2>
-    <ul>
-        @foreach (var song in Model.Songs)
-        {
-            <li>
-                <h3>@song.Title</h3>
-            </li>
-        }
-    </ul>
-    <a href="/Song/Create/@Model.AlbumId">Add Song</a>
-    <a href="/Album/Index">Back to List</a>
+    <div class="container">
+        <h1>@Model.Name</h1>
+        <h2>By: @Model.Artist</h2>
+
+        <img src="@Model.ImgPath" style="height: 25vh; width: auto; padding: 20px" />
+
+        <ul>
+            @foreach (var song in Model.Songs)
+            {
+                <li>
+                    <h3>@song.Title</h3>
+                </li>
+            }
+        </ul>
+        <a href="/Song/Create/@Model.AlbumId">Add Song</a>
+        <a href="/Album/Index">Back to List</a>
+    </div>
 </body>
 </html>
