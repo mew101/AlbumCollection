@@ -37,5 +37,25 @@ namespace AlbumCollection.Controllers
             songRepo.Create(song);
             return RedirectToAction("../Album/Details/" + song.AlbumId, "Album");
         }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = songRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Song song)
+        {
+
+            songRepo.Delete(song);
+            //return RedirectToAction("Index", "Album", new { id = song.AlbumId });
+            //return RedirectToAction("../Album/Details" );
+            return RedirectToAction("../Album/Details/" + song.AlbumId, "Album");
+
+
+        }
+
     }
 }

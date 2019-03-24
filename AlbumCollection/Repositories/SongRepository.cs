@@ -32,6 +32,11 @@ namespace AlbumCollection.Repositories
             db.SaveChanges();
         }
 
-       
+        public void Delete(Song song)
+        {
+            db.Songs.Remove(song);
+            db.SaveChanges();
+        }
+
     }
 }

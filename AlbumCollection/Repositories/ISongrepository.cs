@@ -11,7 +11,8 @@ namespace AlbumCollection.Repositories
         Song GetById(int Id);
         IEnumerable<Song> GetAll();
         void Create(Song song);
-       
+        void Delete(Song song);
+
     }
 }
 
