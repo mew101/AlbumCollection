@@ -8,19 +8,24 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Collection</title>
+    <title>Index</title>
+    <link href="~/AlbumIndex.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-    <p>Welcome To Album Collection</p>
+    <div class="container">
+        <header>
+            <p id="header">Welcome To Album Collection</p>
         </header>
-    <div>
-        <ul>
-            @foreach (var album in Model)
-            {
-                <li><a href="/Album/Details/@album.AlbumId">@album.Name<br /><img src="@album.ImgPath />"</a></li>
-            }
-        </ul>
+        <div>
+            <ul>
+                @foreach (var album in Model)
+                {
+                    <li><a href="/Album/Details/@album.AlbumId"><span class="album-name">@album.Name</span><br />
+                        <span class="album-artist">@album.Artist</span>
+                        <img src="@album.ImgPath" style="height: 25vh; width: auto; padding: 20px" /></a></li>
+                }
+            </ul>
+        </div>
     </div>
 </body>
 </html>
