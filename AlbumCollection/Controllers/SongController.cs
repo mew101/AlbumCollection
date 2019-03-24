@@ -26,7 +26,7 @@ namespace AlbumCollection.Controllers
         {
             var song = new Song()
             {
-                SongId = id
+                AlbumId = id
             };
             return View(song);
         }
