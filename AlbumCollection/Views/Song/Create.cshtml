@@ -8,6 +8,8 @@
 
 <html>
 <head>
+    <link href="~/Create.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Norican|Raleway" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
 </head>
@@ -25,7 +27,7 @@
                     <input asp-for="Title" class="form-control" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
-               <div class="form-group">
+                <div class="form-group">
                     <input asp-for="AlbumId" type="hidden" class="form-control">
                 </div>
                 <div class="form-group">
@@ -35,10 +37,8 @@
         </div>
 
     </div>
-
-    <div>
-        @* <a asp-action="../Album/Details/@Model.AlbumId">Back to Album</a>*@
-
+    <div class="topnav">
+        <a href="/Album/Index">Back to List</a>
     </div>
 
 

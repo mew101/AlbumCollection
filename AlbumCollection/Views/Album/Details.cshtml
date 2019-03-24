@@ -16,9 +16,9 @@
     <div class="container">
         <h1>@Model.Name</h1>
         <h2>By: @Model.Artist</h2>
-
-        <img src="@Model.ImgPath" style="height: 25vh; width: auto; padding: 20px" />
         <div id="songs">
+            <img src="@Model.ImgPath" style="height: 25vh; width: auto; padding: 20px" />
+
             <ul>
                 @foreach (var song in Model.Songs)
                 {
@@ -29,6 +29,9 @@
             </ul>
         </div>
         <a href="/Song/Create/@Model.AlbumId">Add Song</a>
+
+    </div>
+    <div class="topnav">
         <a href="/Album/Index">Back to List</a>
     </div>
 </body>

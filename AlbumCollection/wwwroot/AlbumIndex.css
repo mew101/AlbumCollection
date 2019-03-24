@@ -35,9 +35,9 @@
     text-align: center;
     align-items: center;
     padding-left: 3em;
-    padding-right: 3em; 
-    background-color: white; 
-   
+    padding-right: 3em;
+    background-color: white;
+    list-style-type: none;
 }  
 .album-name {
     color: dodgerblue;
@@ -46,4 +46,7 @@
 .album-artist {
     color: dodgerblue;
     font-size: 15px;
+}
+li {
+    list-style-type: none;
 }
