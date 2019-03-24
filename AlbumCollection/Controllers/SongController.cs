@@ -35,7 +35,7 @@ namespace AlbumCollection.Controllers
         public ActionResult Create(Song song)
         {
             songRepo.Create(song);
-            return RedirectToAction("../Album/Details/" + song.SongId);
+            return RedirectToAction("../Album/Details/" + song.AlbumId, "Album");
         }
     }
 }
