@@ -11,11 +11,14 @@
     <title>Collection</title>
 </head>
 <body>
+    <header>
+    <p>Welcome To Album Collection</p>
+        </header>
     <div>
         <ul>
             @foreach (var album in Model)
             {
-                <li><a href="/Album/Details/@album.AlbumId">@album.Name<br /></a></li>
+                <li><a href="/Album/Details/@album.AlbumId">@album.Name<br /><img src="@album.ImgPath />"</a></li>
             }
         </ul>
     </div>
