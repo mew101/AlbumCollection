@@ -52,7 +52,7 @@ namespace AlbumCollection.Controllers
             songRepo.Delete(song);
             //return RedirectToAction("Index", "Album", new { id = song.AlbumId });
             //return RedirectToAction("../Album/Details" );
-            return RedirectToAction("../Album/Details/" + song.AlbumId, "Album");
+            return RedirectToAction("Details/" + song.AlbumId, "Album");
 
 
         }

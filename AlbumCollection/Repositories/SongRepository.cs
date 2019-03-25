@@ -15,9 +15,9 @@ namespace AlbumCollection.Repositories
             this.db = db;
         }
 
-        public Song GetById(int Id)
+        public Song GetById(int id)
         {
-            return db.Songs.Single(Song => Song.SongId == Id);
+            return db.Songs.Single(Song => Song.SongId == id);
         }
 
         public IEnumerable<Song> GetAll()
